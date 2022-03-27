@@ -8,7 +8,8 @@ function App() {
   const [todo, settodo] = useState([])
   return (
     <div className="App">
-      <Header dark={dark}setdark={setdark} />
+      <Header dark={dark} setdark={setdark} />
+      <TodoCreator todo={todo} settodo={settodo} />
      
     </div>
   );
