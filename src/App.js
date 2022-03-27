@@ -5,10 +5,11 @@ import TodoCreator from './TodoCreator';
 
 function App() {
   const [dark, setdark] = useState(false)
+  const [todo, settodo] = useState([])
   return (
     <div className="App">
       <Header dark={dark}setdark={setdark} />
-      <TodoCreator/>
+     
     </div>
   );
 }

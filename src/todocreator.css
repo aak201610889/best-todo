@@ -1,0 +1,42 @@
+.todoCreator{
+  margin: 20px 0 0 20px;
+  background-color: rgb(97, 93, 93);
+  width: 250px;
+  height: 300px;
+}
+.main_inputcreator{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main_inputcreator>input{
+margin-top: 10px;
+border-radius: 20px;
+height: 35px;;
+}
+.main_inputcreator>input:nth-child(2){
+margin-bottom: 10px;
+height: 150px;
+}
+.group_btn_c{
+margin-left: 10px;
+}
+.group_btn_c>button{
+  background-color: #fff;
+  color: rgb(56, 49, 49);
+  border-radius: 20px;
+  width: 50px;
+  text-align: center;
+  border: none;
+  margin-left: 5px;
+
+}
+.group_btn_c>button:nth-child(2){
+  margin-right: 5px;
+}
+.group_btn_c>input{
+background-color: #fff;
+border: none;
+color: rgb(66, 56, 56);
+}
