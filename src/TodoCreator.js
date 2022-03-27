@@ -3,10 +3,10 @@ import './todocreator.css'
 function TodoCreator({ todo, settodo }) {
   const [title, settitle] = useState("");
   const [desc, setdesc] = useState("");
-  const [date, setdate] = useState(Date.now);
+
   const AddingTodo = () => {
-    settodo([...todo, { title, desc, date }]);
-console.log(todo);
+    settodo([...todo, { title, desc }]);
+
   }
   return (
     <div className="todoCreator">
@@ -25,11 +25,11 @@ console.log(todo);
         />
       </div>
       <div className="group_btn_c">
-        <button className="done" onClick={AddingTodo}>
+        <button className="done" onClick={AddingTodo} >
           create
         </button>
       
-        <input type="time" onChange={(e) => setdate(e.target.value)} />
+       
       </div>
     </div>
   );

@@ -1,9 +1,15 @@
 import React from 'react'
-
-function DoneTodoCart() {
+import './done__todo.css'
+function DoneTodoCart({ title, doneTime, setdoneTime }) {
   return (
-    <div>DoneTodoCart</div>
-  )
+    <div className='todo_done' >
+      
+      <div>
+        <s>{title}</s>
+     
+      </div>
+    </div>
+  );
 }
 
 export default DoneTodoCart

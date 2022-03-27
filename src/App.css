@@ -1,0 +1,20 @@
+.App>.main{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+.main>.left{
+  background-color: white;
+  text-align: center;
+  border: 2px rgb(109, 13, 13) solid;
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 250px;
+  height: 300px;
+
+}
+.left>h1{
+  color:rgb(66, 16, 16) ;
+  border-bottom: 3px rgb(99, 16, 16) solid;
+}

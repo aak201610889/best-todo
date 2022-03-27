@@ -1,8 +1,15 @@
 import React, { useState } from 'react'
 import './todocart.css'
-function TodoCart({ title, desc, todo, settodo, done, setdone }) {
-  const [doneTime, setdoneTime] = useState(new Date());
-
+function TodoCart({
+  title,
+  desc,
+  todo,
+  settodo,
+  done,
+  setdone,
+  doneTime,
+  setdoneTime,
+}) {
   const HandleDelete = (title) => {
     if (todo.length === 1) {
       settodo([]);
@@ -11,17 +18,11 @@ function TodoCart({ title, desc, todo, settodo, done, setdone }) {
     }
   };
   const HandleDone = (title) => {
-
-    if (todo.length === 1) {
-    
-      settodo([]);
-    } else {
-      setdone(todo.filter((item) => item.title === title));
-      console.log('2222222222222222222222222');
-      console.log(done);
-            console.log("2222222222222222222222222");
-      settodo(todo.filter((item) => item.title !== title));
-    }
+    let aak = [];
+    aak = todo.filter((item) => item.title == title);
+    settodo(todo.filter((item) => item.title !== title));
+    setdone(done.concat(aak));
+    setdoneTime(new Date());
   };
 
   return (
@@ -34,7 +35,12 @@ function TodoCart({ title, desc, todo, settodo, done, setdone }) {
       </div>
 
       {/* we will take time */}
-      <button className="done" onClick={() => {HandleDone(title)}}>
+      <button
+        className="done"
+        onClick={() => {
+          HandleDone(title);
+        }}
+      >
         done
       </button>
       <button className="edit" onClick={() => {}}>

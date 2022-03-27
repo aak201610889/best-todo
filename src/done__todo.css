@@ -1,0 +1,13 @@
+.todo_done{
+margin-top: 5px;
+ width: 100%;
+ border: 2px solid #4e0f0f;
+padding: 5px;
+ color: #440e0e;
+
+}
+.todo_done:hover,s.hover{
+  background-color: #4e1111;
+  color: #fff;
+  cursor: pointer;
+}
