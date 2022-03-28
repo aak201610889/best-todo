@@ -1,0 +1,75 @@
+.edittodocart{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.edittodocart__dark{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 9999;
+  background-color: rgba(179, 179, 179, 0.329);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.editcontent{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(61, 11, 11);
+  width: 250px;
+  height: 320px;
+}
+.editcontent>input{
+  margin-top: 10px;
+  border-radius: 10px;
+  height: 40px;
+  border: none;
+}
+.editcontent>input:focus{
+  outline: none;
+}
+.editcontent>input:nth-child(2){
+  margin-top: 10px;
+  height: 120px;
+}
+.editcontent>button{
+  margin-top: 10px;
+  background-color: #fff;
+  border: none;
+  border-radius: 10px;
+  width: 80px;
+}
+.editcontent>button:hover{
+  cursor: pointer;
+
+}
+.closeModal{
+  position: relative;
+  top: -160px;
+  right: 15px;
+  background-color: rgb(255, 0, 0);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  color: #fff;
+  border: none;
+}
+.closeModal:hover{
+  background-color: rgb(255, 255, 255);
+  color: rgb(255, 0, 0);
+  cursor: pointer;
+}

@@ -1,19 +1,21 @@
 .header{
   display: flex;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   justify-content: space-between;
   align-items: center;
   padding-top: 10px;
-  border-bottom: 2px solid rgb(105, 17, 17);
+  border-bottom: 2px solid rgb(0, 0, 0);
   padding-bottom: 5px;
 
 }
 .header__dark{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 10px;
   border-bottom: 2px solid rgb(48, 48, 48);
-  background-color: rgb(54, 54, 54);
+  background-color: rgb(39, 39, 39);
   padding-bottom: 5px;
 }
 .Other{
@@ -26,8 +28,8 @@
 width: 18px;
 height: 18px;
 border-radius: 50%;
-background-color: rgb(92, 10, 10);
-border: 2px solid rgb(0, 0, 0);
+background-color: rgb(0, 0, 0);
+border: 2px solid rgb(167, 167, 167);
 
 }
 
@@ -35,11 +37,13 @@ border: 2px solid rgb(0, 0, 0);
   cursor: pointer;
 }
 .logo>h1{
-  color: rgb(88, 12, 12);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: rgb(0, 0, 0);
   font-size: 3rem;
     margin-left: 10px;
 }
 .logo__dark>h1{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: rgb(253, 253, 253);
   font-size: 3rem;
     margin-left: 10px;
@@ -50,6 +54,25 @@ height: 18px;
 border-radius: 50%;
 background-color: rgb(226, 226, 226);
 border: 2px solid rgb(161, 159, 156);
+}
+.btn{
+  background-color: transparent;
+  border: 1px solid rgb(71, 71, 71);
+  color: rgb(44, 44, 44);
+  font-size: 1rem;
+  padding: 5px;
+  border-radius: 20px;
+  margin-left: 20px;
+}
+.btn__dark{
+  background-color: transparent;
+
+    border: 1px solid rgb(247, 247, 247);
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  padding: 5px;
+  border-radius: 20px;
+  margin-left: 20px;
 }
 .links{
   display: flex;
@@ -70,7 +93,7 @@ border: 2px solid rgb(161, 159, 156);
 }
 .links>div{
   margin-right: 15px;
-  color: rgb(73, 15, 15);
+  color: rgb(41, 41, 41);
 }
 .links>div:nth-child(1){
   margin-left: 15px;

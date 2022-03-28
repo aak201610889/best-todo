@@ -1,15 +1,30 @@
 import React, { useState } from 'react'
 import './todocreator.css'
-function TodoCreator({ todo, settodo }) {
+function TodoCreator({ todo, settodo, dark }) {
   const [title, settitle] = useState("");
   const [desc, setdesc] = useState("");
 
   const AddingTodo = () => {
+    if (title === "" || desc === "") {
+      return null;
+    }
+    
+    //to prevent adding same todo
+    if (todo.find(todo => todo.title === title || todo.desc === desc)) {
+      console.log("Todo already exists");
+      return null;
+    }
+
     settodo([...todo, { title, desc }]);
+    settitle("");
+    setdesc("");
+
+    
 
   }
+
   return (
-    <div className="todoCreator">
+    <div className={dark ? "todoCreator__dark" : "todoCreator"}>
       <div className="main_inputcreator">
         <input
           type="text"
@@ -25,11 +40,9 @@ function TodoCreator({ todo, settodo }) {
         />
       </div>
       <div className="group_btn_c">
-        <button className="done" onClick={AddingTodo} >
+        <button className="done" onClick={AddingTodo}>
           create
         </button>
-      
-       
       </div>
     </div>
   );

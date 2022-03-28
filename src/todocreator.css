@@ -1,6 +1,14 @@
 .todoCreator{
   margin: 20px 0 0 20px;
-  background-color: rgb(97, 93, 93);
+  background-color: rgb(255, 255, 255);
+  width: 250px;
+  height: 300px;
+  border: 3px solid #313131;
+ 
+}
+.todoCreator__dark{
+  margin: 20px 0 0 20px;
+  background-color: rgb(97, 97, 97);
   width: 250px;
   height: 300px;
 }
@@ -9,12 +17,23 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 }
 .main_inputcreator>input{
 margin-top: 10px;
-border-radius: 20px;
+border-radius: 2px;
+padding-left: 10px;
 height: 35px;;
+border: none;
+background-color: rgb(238, 236, 236);
+border:1px solid rgb(15, 10, 10);
+font-weight: bold;
 }
+.main_inputcreator>input:focus{
+  outline: none;
+  
+}
+
 .main_inputcreator>input:nth-child(2){
 margin-bottom: 10px;
 height: 150px;
@@ -24,19 +43,12 @@ margin-left: 10px;
 }
 .group_btn_c>button{
   background-color: #fff;
-  color: rgb(56, 49, 49);
+  color: rgb(3, 3, 3);
   border-radius: 20px;
-  width: 50px;
   text-align: center;
   border: none;
-  margin-left: 5px;
+  margin-left: 30%;
+  width: 70px;
+  
 
-}
-.group_btn_c>button:nth-child(2){
-  margin-right: 5px;
-}
-.group_btn_c>input{
-background-color: #fff;
-border: none;
-color: rgb(66, 56, 56);
 }

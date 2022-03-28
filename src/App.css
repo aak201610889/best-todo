@@ -1,4 +1,8 @@
-.App>.main{
+.App__dark {
+  background-color: rgb(29, 29, 29);
+  height: 10000px;
+}
+.main{
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -14,7 +18,37 @@
   height: 300px;
 
 }
-.left>h1{
-  color:rgb(66, 16, 16) ;
-  border-bottom: 3px rgb(99, 16, 16) solid;
+.donecart{
+  background-color: rgb(245, 245, 245);
+  text-align: center;
+  border: 2px rgb(109, 13, 13) solid;
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 250px;
+  height: 300px;
+  border: 2px rgb(0, 0, 0) solid;
+
+}
+.doneTitle{
+  color:rgb(17, 17, 17) ;
+  border-bottom: 3px rgb(255, 255, 255) solid;
+}
+.donecart__dark{
+  background-color: rgb(104, 102, 102);
+  text-align: center;
+  border: 2px rgb(5, 5, 5) solid;
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 250px;
+  height: 300px;
+  border: 2px rgb(255, 255, 255) solid;
+
+}
+.doneTitle__dark{
+  color:rgb(245, 245, 245) ;
+  border-bottom: 3px rgb(255, 255, 255) solid;
+}
+.todo{
+  display: flex;
+  flex-wrap: wrap;
 }
