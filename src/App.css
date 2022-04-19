@@ -1,6 +1,6 @@
 .App__dark {
   background-color: rgb(29, 29, 29);
-  height: 10000px;
+  min-height: 100vh;
 }
 .main{
   display: flex;

@@ -1,5 +1,7 @@
 import React from 'react'
 import './header.css'
+import Brightness4Icon from "@material-ui/icons/Brightness4";
+import Brightness5Icon from "@material-ui/icons/Brightness5";
 function Header({
   dark,
   setdark,
@@ -30,19 +32,26 @@ function Header({
         </button>
       </div>
       <div className="Other">
-        <button
-          className={dark ? "theming__dark" : "theming"}
-          onClick={() => {
-            setdark(!dark);
-          }}
-        ></button>
+        {dark ? (
+          <Brightness5Icon
+            className={dark ? "header__icon__dark" : "header__icon"}
+            onClick={() => {
+              setdark(false);
+            }}
+          />
+        ) : (
+          <Brightness4Icon
+            className={dark ? "header__icon__dark" : "header__icon"}
+            onClick={() => {
+              setdark(true);
+            }}
+          />
+        )}
         <div className={dark ? "dark__links" : "links"}>
           <div>
             <h1>Todo</h1>
           </div>
-          <div>
-            <h1>Weather</h1>
-          </div>
+          <div></div>
         </div>
       </div>
     </div>

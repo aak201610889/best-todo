@@ -18,15 +18,15 @@ function TodoCart({
   setshowEdit,
 }) {
   const HandleDelete = (title) => {
-    if (todo.length === 1) {
-      settodo([]);
-    } else {
-      settodo(todo.filter((item) => item.title !== title));
-    }
+    console.log(todo.title);
+    settodo(todo.filter((todo) => todo.title !== title));
+
   };
+  //color each todo defferent color
+
+      
   const colorHandler = (e) => {
     setcolor(e.target.value);
-
   };
 
   const HandleDone = (title) => {
@@ -41,7 +41,6 @@ function TodoCart({
     aak = todo.filter((item) => item.title == title);
     setshowEdit(true)
     setEdit(aak);
-    console.log("====================================");
   };
   if (title === "" || desc === "") {
     return null;
@@ -55,11 +54,11 @@ function TodoCart({
           ? "blue"
           : color === "green"
           ? "green"
-                : color === "white"
-              ? "white" 
-                : color === "brown"
-              ? "brown" :'dark'
-              
+          : color === "white"
+          ? "white"
+          : color === "brown"
+          ? "brown"
+          : "dark"
       }`}
     >
       <div className="main">
@@ -99,10 +98,11 @@ function TodoCart({
             ? "blue"
             : color === "green"
             ? "green"
-              : color === "white"
-                ? "white"
-                : color === "brown"
-                ? "brown" :'dark'
+            : color === "white"
+            ? "white"
+            : color === "brown"
+            ? "brown"
+            : "dark"
         }`}
       >
         <option value="brown">brown</option>
@@ -112,7 +112,12 @@ function TodoCart({
         <option value="white">white</option>
         <option value="dark">dark</option>
       </select>
-      <button className="delete" onClick={HandleDelete}>
+      <button
+        className="delete"
+        onClick={() => {
+          HandleDelete(title);
+        }}
+      >
         x
       </button>
     </div>

@@ -34,7 +34,10 @@ font-weight: bold;
   
 }
 
-.main_inputcreator>input:nth-child(2){
+.main_inputcreator>textarea{
+  resize: none;
+  width: 239px;
+  margin-top: 20px;
 margin-bottom: 10px;
 height: 150px;
 }

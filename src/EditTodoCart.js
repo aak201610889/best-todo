@@ -1,14 +1,30 @@
 import React, { useState } from 'react'
 import "./edittodocart.css";
-function EditTodoCart({ Edit, setEdit, showEdit, setshowEdit,dark}) {
+function EditTodoCart({
+  Edit,
+  setEdit,
+  showEdit,
+  setshowEdit,
+  todo,
+  settodo,
+  dark,
+}) {
   const [title, settitle] = useState("");
   const [desc, setdesc] = useState("");
   const EditHandler = () => {
-    setEdit({ title, desc });
-    console.log("====================================");
-    console.log(Edit);
-    console.log("====================================");
-    setshowEdit(false)
+    if (title === "" || desc === "") {
+      return null;
+    }
+    let aak = [];
+    aak = todo.filter((item) => item.title == Edit[0].title);
+    aak[0].title = title;
+    aak[0].desc = desc;
+    settodo(todo.filter((item) => item.title !== Edit[0].title));
+    settodo(todo);
+    setEdit([]);
+    setshowEdit(false);
+
+    console.log(todo);
   };
 
   return (
@@ -19,11 +35,13 @@ function EditTodoCart({ Edit, setEdit, showEdit, setshowEdit,dark}) {
           placeholder={Edit.title}
           onChange={(e) => settitle(e.target.value)}
         />
-        <input
+        <textarea
+          rows={4}
           type="text"
           placeholder={Edit.desc}
           onChange={(e) => setdesc(e.target.value)}
-        />
+        ></textarea>
+
         <button onClick={EditHandler}>Edit</button>
       </div>
       <button

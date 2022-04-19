@@ -12,7 +12,7 @@ import EditTodoCart from './EditTodoCart';
 
 function App() {
   const [dark, setdark] = useState(false)
-  const [todo, settodo] = useState([])
+  const [todo, settodo] = useState([]);
   const [done, setdone] = useState([])
   const [Edit, setEdit] = useState([])
   const [showEdit, setshowEdit] = useState(false)
@@ -66,7 +66,9 @@ function App() {
                 setEdit={setEdit}
                 setshowEdit={setshowEdit}
                 showEdit={showEdit}
-                dark={ dark}
+                dark={dark}
+                todo= {todo}
+                settodo={settodo}
               />
             )}
 
@@ -76,9 +78,11 @@ function App() {
                 {done.map((item, index) => (
                   <DoneTodoCart
                     title={item.title}
+                    desc={item.desc}
                     key={index}
                     doneTime={doneTime}
                     dark={dark}
+                    todo={todo} settodo= {settodo}
                   />
                 ))}
               </div>

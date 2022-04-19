@@ -5,7 +5,7 @@ function TodoCreator({ todo, settodo, dark }) {
   const [desc, setdesc] = useState("");
 
   const AddingTodo = () => {
-    if (title === "" || desc === "") {
+    if (title === ""|| desc === "") {
       return null;
     }
     
@@ -32,12 +32,12 @@ function TodoCreator({ todo, settodo, dark }) {
             settitle(e.target.value);
           }}
         />
-        <input
-          type="text"
+        <textarea
+          rows={4}
           onChange={(e) => {
             setdesc(e.target.value);
           }}
-        />
+        ></textarea>
       </div>
       <div className="group_btn_c">
         <button className="done" onClick={AddingTodo}>
